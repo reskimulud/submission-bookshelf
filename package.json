@@ -1,14 +1,14 @@
 {
   "name": "submission-bookshelf",
   "version": "1.0.0",
-  "description": "",
+  "description": "Aplikasi backend Bookshelf API menggunakan framework Hapi. Ditujukan sebagai syarat kelulusan kelas Belajar Membuat Aplikasi Backend untuk Pemula",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon ./src/server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Reski Mulud Muchamad (https://reskimulud.my.id)",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^8.4.1",
