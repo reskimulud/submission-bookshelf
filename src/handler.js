@@ -2,10 +2,33 @@ const { nanoid } = require('nanoid')
 const books = require('./books')
 
 const getAllBooksHandler = (request, h) => {
+  const { name, finished, reading } = request.query
+  let bookFiltered = books
+
+  if (name !== undefined) {
+    bookFiltered = books.filter((book) => (
+      book.name.toLowerCase().includes(name.toLowerCase())
+    ))
+  }
+
+  if (finished !== undefined) {
+    bookFiltered = books.filter((book) => (
+      book.finished === Boolean(Number(finished))
+    ))
+  }
+
+  if (reading !== undefined) {
+    bookFiltered = books.filter((book) => (
+      book.reading === Boolean(Number(reading))
+    ))
+  }
+
+  console.log(bookFiltered)
+
   return {
     status: 'success',
     data: {
-      books: books.map((book) => ({
+      books: bookFiltered.map((book) => ({
         id: book.id,
         name: book.name,
         publisher: book.publisher,
