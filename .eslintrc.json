@@ -16,6 +16,5 @@
         "no-unused-vars": "warn",
         "linebreak-style": "off",
         "semi": "off",
-        "object-curly-spacing": "off"
     }
 }

@@ -23,8 +23,6 @@ const getAllBooksHandler = (request, h) => {
     ))
   }
 
-  console.log(bookFiltered)
-
   return {
     status: 'success',
     data: {
